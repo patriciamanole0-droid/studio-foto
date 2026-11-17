@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Studio Foto - Galerie & Contact</title>
+    <style>
+        body { font-family: sans-serif; margin: 0; background: #f8f9fa; color: #333; }
+        header { background: #1a252f; color: white; padding: 20px; text-align: center; }
+        nav { margin-top: 15px; }
+        nav a { background: #2980b9; color: white; text-decoration: none; padding: 8px 15px; margin: 0 4px; border-radius: 4px; }
+        nav a:hover, nav a.active { background: #e67e22; }
+        .container { max-width: 800px; margin: 20px auto; background: white; padding: 20px; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        h2 { color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 8px; }
+        .galerie-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px; margin-bottom: 30px; }
+        .galerie-grid img { width: 100%; height: 220px; object-fit: cover; border-radius: 4px; border: 1px solid #ddd; }
+        form { display: grid; gap: 10px; margin-top: 15px; }
+        input, select, textarea { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        button { background: #27ae60; color: white; border: none; padding: 10px; border-radius: 4px; cursor: pointer; font-weight: bold; }
+        button:hover { background: #219653; }
+        .contact-info { background: #f1f2f6; padding: 15px; border-radius: 5px; margin-bottom: 20px; }
+        footer { text-align: center; margin-top: 30px; padding: 10px; background: #1a252f; color: #aaa; font-size: 13px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Studio Foto - Lumina & Culoare</h1>
+        <nav>
+            <a href="index.html">Acasă</a>
+            <a href="servicii.html">Servicii</a>
+            <a href="galerie.html" class="active">Galerie & Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Galerie Foto</h2>
+        <p>Câteva cadre selectate din portofoliul nostru recent:</p>
+        
+        <div class="galerie-grid">
+            <img src="img std.jpg" alt="Portret Studio">
+            <img src="img.std.jpg" alt="Ședință Foto">
+        </div>
+
+        <div class="contact-info">
+            <h3>Date de Contact</h3>
+            <p>📍 <strong>Adresă:</strong> Str. Libertății nr. 15, Chișinău</p>
+            <p>📞 <strong>Telefon:</strong> +373 60 123 456</p>
+            <p>✉️ <strong>Email:</strong> contact@luminaculoare.md</p>
+            <p>⏰ <strong>Program:</strong> Luni - Sâmbătă: 09:00 - 18:00</p>
+        </div>
+
+        <h2>Formular de Programare Rapidă</h2>
+        <form onsubmit="alert('Programare trimisă cu succes! Vă vom contacta în curând.'); return false;">
+            <label for="nume">Nume și Prenume:</label>
+            <input type="text" id="nume" required placeholder="Numele tău">
+
+            <label for="email">Email sau Telefon:</label>
+            <input type="text" id="email" required placeholder="email sau nr. de telefon">
+
+            <label for="pachet">Alege pachetul:</label>
+            <select id="pachet">
+                <option>Ședință Portret (50 €)</option>
+                <option>Foto Familie (80 €)</option>
+                <option>Eveniment Standard (150 €)</option>
+                <option>Ședință Outdoor (70 €)</option>
+            </select>
+
+            <label for="mesaj">Detalii / Data dorită:</label>
+            <textarea id="mesaj" rows="3" placeholder="Menționați data sau alte cerințe..."></textarea>
+
+            <button type="submit">Trimite Programarea</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Studio Foto. Toate drepturile rezervate.</p>
+    </footer>
+
+</body>
+</html>
